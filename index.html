@@ -2,31 +2,67 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oxy Club | Linebet BD</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oxy Club | Linebet রেজিস্ট্রেশন অফার</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="container">
-    <h1>🎯 Oxy Club Presents</h1>
-    <h2>100% Bonus on Linebet Registration</h2>
+<body class="page-enter">
 
-    <div class="promo">
-      🔗 Affiliate Link:<br>
-      <a href="https://lb-aff.com/I?tag=d_4476715m_63771c_&site=4476715&ad=63771" target="_blank" class="link">
-        https://lb-aff.com/I...
-      </a><br><br>
-      🎁 Use Promo Code: <strong>Oxy11</strong><br>
-      📞 Contact: <strong>+8801826444505</strong>
+  <header>
+    <div class="header-content">
+      <img src="https://carzytime.net/wp-content/uploads/2023/07/linebet-logo.png" class="logo" alt="Linebet Logo" />
+      <a href="https://linebet.press/oxy11" class="header-btn" target="_blank">রেজিস্টার</a>
     </div>
+  </header>
 
-    <a class="btn" href="https://lb-aff.com/I?tag=d_4476715m_63771c_&site=4476715&ad=63771" target="_blank">
-      ✅ Register Now
-    </a>
+  <marquee class="notice">
+    🎯 Oxy Club এর পক্ষ থেকে আপনাকে স্বাগতম! এখনই রেজিস্টার করুন 👉 WhatsApp: +8801826444505
+  </marquee>
 
-    <footer>
-      Powered by Oxy Club BD | Linebet Affiliate 2025
-    </footer>
-  </div>
+  <section>
+    <h2>🎁 বোনাস অফার</h2>
+    <p>প্রথম রেজিস্ট্রেশনে <strong>100% বোনাস!</strong> প্রোমো কোড:
+      <button id="promoCopyBtn" data-promo="Oxy11">Oxy11</button>
+    </p>
+    <a href="https://linebet.press/oxy11" class="main-btn" target="_blank">Linebet রেজিস্টার করুন</a>
+  </section>
+
+  <section>
+    <h3>💳 সহজ পেমেন্ট পদ্ধতি</h3>
+    <ul>
+      <li>✅ bKash</li>
+      <li>✅ Nagad</li>
+      <li>✅ Rocket</li>
+    </ul>
+    <p>WhatsApp এ যোগাযোগ: <a href="https://wa.me/8801826444505" target="_blank">+8801826444505</a></p>
+  </section>
+
+  <section>
+    <h3>📥 অ্যাপ ডাউনলোড</h3>
+    <a href="https://linebet.press/oxy11" class="main-btn" target="_blank">📥 APK ডাউনলোড</a>
+  </section>
+
+  <footer>
+    <p>📞 WhatsApp: <a href="https://wa.me/8801826444505" target="_blank">+8801826444505</a></p>
+    <p>© ২০২৫ Oxy Club | All rights reserved</p>
+  </footer>
+
+  <script>
+    window.onload = function () {
+      const btn = document.getElementById('promoCopyBtn');
+      const promo = btn.getAttribute('data-promo');
+      btn.onclick = function () {
+        navigator.clipboard.writeText(promo).then(() => {
+          btn.innerText = '✅ কপি হয়েছে!';
+          btn.style.background = '#007d47';
+          setTimeout(() => {
+            btn.innerText = promo;
+            btn.style.background = '#00cc66';
+          }, 2000);
+        });
+      };
+    };
+  </script>
+
 </body>
 </html>
