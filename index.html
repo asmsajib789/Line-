@@ -59,13 +59,12 @@
 <section>
   <h3>🌀 ফ্রী স্পিন অফার!</h3>
   <p>নতুন ইউজারদের জন্য বিশেষ অফার — এখনই রেজিস্ট্রেশন করে পাচ্ছেন ফ্রী স্পিন সুবিধা 🎰</p>
+  
+  <div id="countdown" style="font-size: 20px; font-weight: bold; color: #00ffcc; margin: 10px 0;">
+    ⏳ অফার শেষ হতে বাকি: <span id="countdown-timer">লোড হচ্ছে...</span>
+  </div>
+  
   <a href="https://linebet.press/oxy11" class="main-btn" target="_blank">👉 এখনই ফ্রী স্পিন নিন</a>
-</section>
-
-<section>
-  <h3>🕒 অফার শেষ হচ্ছে</h3>
-  <p>ফ্রি স্পিন ও বোনাস অফার সীমিত সময়ের জন্য! রেজিস্টার করুন এখনই ⏳</p>
-  <div id="countdown" style="font-size: 24px; font-weight: bold; color: #00ffcc;"></div>
 </section>
 
 <section>
@@ -95,16 +94,16 @@
     });
   };
 
-  // Countdown
-  const endDate = new Date();
-  endDate.setDate(endDate.getDate() + 3); // আজ থেকে ৩ দিন পর
+  // Countdown Script
+  const countdownTarget = new Date();
+  countdownTarget.setDate(countdownTarget.getDate() + 3);
 
   function updateCountdown() {
     const now = new Date().getTime();
-    const distance = endDate.getTime() - now;
+    const distance = countdownTarget.getTime() - now;
 
     if (distance <= 0) {
-      document.getElementById("countdown").innerText = "✅ অফার শেষ!";
+      document.getElementById("countdown-timer").innerText = "✅ অফার শেষ!";
       return;
     }
 
@@ -113,7 +112,7 @@
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("countdown").innerText =
+    document.getElementById("countdown-timer").innerText =
       `${days} দিন : ${hours} ঘন্টা : ${minutes} মিনিট : ${seconds} সেকেন্ড`;
   }
 
