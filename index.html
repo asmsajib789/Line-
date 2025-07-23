@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oxy Club | Linebet রেজিস্ট্রেশন অফার</title>
+  <title>Linebet রেজিস্ট্রেশন</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="page-enter">
@@ -35,7 +35,7 @@
     <li>✅ Rocket</li>
     <li>✅ ব্যাংক ট্রান্সফার</li>
   </ul>
-  <p>ডিপোজিট করতে WhatsApp করুন: <a href="https://wa.me/8801826444505" target="_blank">+8801826444505</a></p>
+  <p>WhatsApp এ যোগাযোগ: <a href="https://wa.me/8801826444505" target="_blank">+8801826444505</a></p>
 </section>
 
 <section>
@@ -57,8 +57,15 @@
 </section>
 
 <section>
-  <h3>🔐 সুরক্ষা ও লাইসেন্স</h3>
-  <p>এই সাইটটি SSL নিরাপদ এবং আন্তর্জাতিকভাবে লাইসেন্সপ্রাপ্ত। আপনার তথ্য সম্পূর্ণ নিরাপদ।</p>
+  <h3>🌀 ফ্রী স্পিন অফার!</h3>
+  <p>নতুন ইউজারদের জন্য বিশেষ অফার — এখনই রেজিস্ট্রেশন করে পাচ্ছেন ফ্রী স্পিন সুবিধা 🎰</p>
+  <a href="https://linebet.press/oxy11" class="main-btn" target="_blank">👉 এখনই ফ্রী স্পিন নিন</a>
+</section>
+
+<section>
+  <h3>🕒 অফার শেষ হচ্ছে</h3>
+  <p>ফ্রি স্পিন ও বোনাস অফার সীমিত সময়ের জন্য! রেজিস্টার করুন এখনই ⏳</p>
+  <div id="countdown" style="font-size: 24px; font-weight: bold; color: #00ffcc;"></div>
 </section>
 
 <section>
@@ -74,20 +81,44 @@
 </footer>
 
 <script>
-  window.onload = function () {
-    const btn = document.getElementById('promoCopyBtn');
-    const promo = btn.getAttribute('data-promo');
-    btn.onclick = function () {
-      navigator.clipboard.writeText(promo).then(() => {
-        btn.innerText = '✅ কপি হয়েছে!';
-        btn.style.background = '#007d47';
-        setTimeout(() => {
-          btn.innerText = promo;
-          btn.style.background = '#00cc66';
-        }, 2000);
-      });
-    };
+  // Promo Copy Button
+  const btn = document.getElementById('promoCopyBtn');
+  const promo = btn.getAttribute('data-promo');
+  btn.onclick = function () {
+    navigator.clipboard.writeText(promo).then(() => {
+      btn.innerText = '✅ কপি হয়েছে!';
+      btn.style.background = '#007d47';
+      setTimeout(() => {
+        btn.innerText = promo;
+        btn.style.background = '#00cc66';
+      }, 2000);
+    });
+  };
+
+  // Countdown
+  const endDate = new Date();
+  endDate.setDate(endDate.getDate() + 3); // আজ থেকে ৩ দিন পর
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = endDate.getTime() - now;
+
+    if (distance <= 0) {
+      document.getElementById("countdown").innerText = "✅ অফার শেষ!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerText =
+      `${days} দিন : ${hours} ঘন্টা : ${minutes} মিনিট : ${seconds} সেকেন্ড`;
   }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
 </script>
 
 </body>
