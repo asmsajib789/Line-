@@ -1,61 +1,104 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #001f3f;
+  padding: 0;
+  font-family: sans-serif;
+  background: #111D2B;
   color: white;
   text-align: center;
-  padding: 20px;
 }
 
-.container {
-  max-width: 500px;
-  margin: auto;
+.page-enter {
+  animation: fadeIn 2s ease-out forwards;
 }
 
-h1 {
-  font-size: 32px;
-  color: #00c7ff;
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+header {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 30px;
-  font-size: 20px;
-  background: #ff9900;
-  color: black;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.3s ease;
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.btn:hover {
-  background: #e68a00;
+.logo {
+  height: 40px;
+  filter: brightness(0) invert(1);
 }
 
-.promo {
-  background: #003366;
-  padding: 15px;
+.header-btn {
+  background-color: #32b643;
+  color: white;
+  padding: 8px 16px;
   border-radius: 5px;
-  margin: 20px 0;
-  font-size: 18px;
-  line-height: 1.6;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-a.link {
+.notice {
+  background: #0A1A2F;
+  padding: 10px;
   color: #00ffcc;
-  word-break: break-all;
-  text-decoration: underline;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+section {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #1E2F40;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2, h3 {
+  color: #00ffcc;
+}
+
+a {
+  color: #00ffcc;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+button#promoCopyBtn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background: #00cc66;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.main-btn {
+  display: inline-block;
+  background: #ff6600;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 footer {
-  margin-top: 40px;
+  margin: 40px 0;
   font-size: 14px;
-  color: #aaa;
+  color: #ccc;
 }
